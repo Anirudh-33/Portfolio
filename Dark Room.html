@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Room</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/4062/4062626.png?uid=R196922884&ga=GA1.1.772123818.1745132278&semt=ais_hybrid">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            background-image: url("https://cdn.pixabay.com/photo/2017/11/09/10/41/wall-2933017_1280.jpg");
+            position: relative;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 8px 15px;
+            background-color: #232323;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            z-index: 10;
+        }
+        .home-button:hover {
+            background-color: #000000;
+        }
+
+        .board{
+            background-size: 100%;
+            width:600px;
+            height:792.16px;
+            margin-top: -380px;
+            margin-left: -80px;
+            display:flex;
+            position:absolute;
+            background-image: url("https://cdn.pixabay.com/photo/2014/11/06/21/08/bulletin-board-519960_1280.jpg");
+            rotate:90deg;
+            background-repeat: no-repeat;
+        }
+
+        .aa{
+            background-color: #ffd4fb;
+            position: absolute;
+            padding: 10px;
+            padding-bottom: 5px;
+            width: 117px;
+            height: 40px;
+            rotate: 5deg;
+            margin-top: -220px;
+            margin-left: 300px;
+            z-index: 0;
+        }
+
+        .aaa{
+            content: "Read Poetry";
+            position: absolute;
+            padding: 10px;
+            padding-bottom: 5px;
+            width: 117px;
+            height: 40px;
+            rotate: 5deg;
+            margin-top: -220px;
+            margin-left: 300px;
+            z-index: 5;
+            color:#000;
+        }
+
+        p{
+            background-color: #fff9d4;
+            position: absolute;
+            padding: 20px;
+            padding-top: 30px;
+            width: 658px;
+            margin-top: -180px;
+            margin-left: -108px;
+            text-align: justify;
+            text-align-last: center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 21px;
+        }
+
+        i,b{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }
+
+        b{
+            font-size: 25px;
+        }
+
+        .pin{
+            width:40px;
+            position: absolute;
+        }
+
+        #pin0{
+            margin-top: -228px;
+            margin-left: 293px; 
+        }
+
+        #pin1{
+            margin-top: -180px;
+            margin-left: -115px;
+        }
+
+        #pin2{
+            margin-top: -180px;
+            margin-left: 500px;
+        }
+
+        #pin3{
+            margin-top: 215px;
+            margin-left: 500px;
+        }
+
+        #pin4{
+            margin-top: 215px;
+            margin-left: -115px;
+        }
+
+        .layer{
+            background-color: black;
+            opacity: 0.95; /* Default: dark when bulb is off */
+            width: 102%;
+            height: 102%;
+            margin-left: -8px;
+            margin-top: -8px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Behind the wrapper */
+            transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        }
+        .layer.bright{
+            opacity: 0.1; /* Brighter when bulb is on */
+        }
+        .wrapper{
+            width: 450px;
+            height: 500px;
+            position: relative;
+            z-index: 2; /* Above the layer */
+        }
+        .bulbb{
+            margin-top: -99px;
+            height: 100px;
+            width: auto;
+            position: absolute;
+            rotate: 180deg;
+            left: 150%;
+        }
+        img#bulb-off{
+            opacity: 0.2; /* Bulb-off is dim when bulb is off */
+            z-index: 1; /* Behind bulb-on */
+        }
+        img#bulb-on{
+            opacity: 0; /* Bulb-on is hidden by default */
+            z-index: 2; /* Above bulb-off */
+        }
+        @keyframes glow {
+            0%{
+                opacity: 1;
+            }
+            5%{
+                opacity: 1;
+            }
+            70%{
+                opacity: 1;
+            }
+            74%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 1;
+            }
+            84%{
+                opacity: 0;
+            }
+            90%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .btn{
+            position: absolute;
+            bottom: 0;
+            left: 150%;
+        }
+        .btn span{
+            height: 50px;
+            width: 180px;
+            display: block;
+            text-align: center;
+            line-height: 48px;
+            background: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 20px;
+            cursor: pointer;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn span:hover{
+            background: #fff;
+            color: #111;
+        }
+        #btn:checked ~ .btn span{
+            background: #fff;
+            color: #111;
+        }
+        .btn span:before{
+            content: "Turn On"; /* Default state is off, so button says "Turn On" */
+        }
+        #btn:checked ~ img#bulb-on{
+            opacity: 1; /* Bulb-on turns on when checked */
+            animation: glow 3s linear infinite; /* Apply glow animation when on */
+        }
+        #btn:checked ~ img#bulb-off{
+            opacity: 1; /* Bulb-off is fully visible when bulb is on */
+        }
+        #btn:checked ~ .btn span:before{
+            content: "Turn Off"; /* When checked, button says "Turn Off" */
+        }
+        .wrapper input{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+    <section>
+        <div class="board"></div>
+        <div class="aa"></div>
+        <a class="aaa" href="https://hotchocolate.water.blog/2023/01/18/this-is-the-nation-i-was-born-into/">
+            Read Poetry
+        </a>
+        
+        <p>
+            <b>UNITY IN CREATIVITY</b>
+            <br> <br>
+            The event was organized in the year 2022, where people participated in various competitions from all across India. Anirudh, focusing on expressing rather than winning, wrote a poem in simple words keeping in mind to include various figures of speech and tints of every possible national attribute people are proud of. The title was — <i>This is the Nation I was Born Into,</i> a patriotic poem which was submitted for Deshbhakti Geet (Patriotic Song) Competition. Next year, in the month of Feb, when the results were out, Anirudh was thrilled with the news that he had secured second position at state level (U.P.), bagging a cash prize of Rs. 75,000/- and receiving an award shield plus certificate from <i>Mrs. Meenakshi Lekhi, Minister of External Affairs and Culture.</i> His this achievement dismissed all his self doubts, motivating him to keep up with his passion.
+        </p>
+        <img src="Pin.png" class="pin" id="pin0">
+        <img src="Pin.png" class="pin" id="pin1">
+        <img src="Pin.png" class="pin" id="pin2">
+        <img src="Pin.png" class="pin" id="pin3">
+        <img src="Pin.png" class="pin" id="pin4">   
+    </section>
+    <div class="layer"></div>
+    <div class="wrapper">
+        <input type="checkbox" id="btn">
+        <img id="bulb-off" class="bulbb" src="bulb-off.png">
+        <img id="bulb-on" class="bulbb" src="bulb-on.png">
+        <label for="btn" class="btn">
+            <span></span>
+        </label>
+    </div>
+    <script>
+        const checkbox = document.getElementById('btn');
+        const layer = document.querySelector('.layer');
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                layer.classList.add('bright'); // Bulb on, layer brightens
+            } else {
+                layer.classList.remove('bright'); // Bulb off, layer darkens
+            }
+        });
+    </script>
+</body>
+</html>

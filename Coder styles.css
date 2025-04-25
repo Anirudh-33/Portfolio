@@ -1,0 +1,151 @@
+body{
+    background-image: url("https://images.pexels.com/photos/29624348/pexels-photo-29624348/free-photo-of-modern-home-office-desk-with-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100%;
+    background-blend-mode:lighten;
+    /* align-items: center; */
+    overflow-x: hidden;
+    background-position: center 35%;
+}
+
+.home-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 8px 15px;
+  background-color: #232323;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  z-index: 10;
+}
+.home-button:hover {
+  background-color: #000000;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: 3px 3px 0px black;
+
+}
+
+.p_l{
+  width:66%;
+  height: 62vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 0%;
+
+}
+
+.para{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 20px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align-last: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*//////*/
+.btn-wrapper{
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0%;
+  justify-content: center;
+  Width:500px;
+  display: flex;
+  /* background-color: blueviolet; */
+}
+
+.btn {
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-right: 40px;
+  z-index: 106;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px; 
+  
+}
+
+.btn img{
+  transition: background 1s, transform 0.3s ease-out, scale 1s, box-shadow 0.3s ease;
+}
+
+.details {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  align-items: center;
+}
+
+.btn:hover .details {
+  display: block;
+}
+/* glow */
+@keyframes glowing{
+  0% {
+    box-shadow: 0px 0px 35px #ff00dd; 
+  }
+  25% {
+    box-shadow: 0px 0px 35px #002BFF; 
+  }
+  50% {
+    box-shadow: 0px 0px 35px #48FF00;
+  }
+  75% {
+    box-shadow: 0px 0px 35px #FFFB00;
+  }
+  100% {
+    box-shadow: 0px 0px 35px #ff00dd;
+  }
+}
+
+/* hover */
+.btn:hover img{
+  transform: scale(1.1);
+  /* animation-name: glowing; */
+  animation: glowing 5s ease-in-out infinite;
+}
+
+.btn:active{
+  transform: scale(1);
+}
+
+.btn img{
+  z-index: 107;
+  width: 182px;
+  height: 182px;
+  border-radius: 50%;
+  position: relative;
+  object-fit: cover;
+  left:-7px;
+  top: -1.8px;
+  border-color: black;
+  border-width:thick;
+}
+
+
+
+
+

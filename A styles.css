@@ -1,0 +1,204 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1679431358007-b72d812fe68e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100%;
+    height:280vh;
+    background-blend-mode:lighten;
+    overflow-x: hidden;
+    background-position: 0% 0%;
+    background-repeat:2;
+    align-items: center;
+}
+
+.home-button, .ach-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 15px;
+  background-color: #232323;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  z-index: 202; /* Lower z-index to simplify stacking context */
+}
+
+.ach-button {
+  left: 100px;
+}
+
+.home-button:hover, .ach-button:hover::after {
+  background-color: #000000;
+}
+
+.ach-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+.ach-button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1; /* Place behind the button */
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glow 20s linear infinite;
+  border-radius: 4px; /* Match button's border-radius */
+  opacity: 1; /* Always visible; change to 0 if you want hover effect */
+}
+
+@keyframes glow {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.ach-button:hover::before {
+  opacity: 1; /* Ensure glow is visible on hover if opacity is initially 0 */
+}
+
+.ach-button:active {
+  background: transparent;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: 3px 3px 0px black;
+    z-index: 10;
+    position: relative;
+}
+
+.photos{
+    display: flex;
+    margin-top: 200px;
+    margin-left: 60px;
+}
+
+.board{
+    background-size: 100%;
+    width:970px;
+    height:1280px;
+    margin-top: -110px;
+    margin-left: 300px;
+    display:flex;
+    position:absolute;
+    background-image: url("https://cdn.pixabay.com/photo/2014/11/06/21/08/bulletin-board-519960_1280.jpg");
+    rotate:90deg;
+    background-repeat: no-repeat;
+}
+
+#pic1, #pic2, #pic3, .pic {
+    width: 500px;
+    height: 432.7px;
+    position: relative;
+    animation: rotate 2s infinite linear; /* Continuous rotation */
+    transition: transform 0.6s ease;
+    transform-origin: 50% 25px; /* Hinge at the middle top */
+}
+
+#pic1::after, #pic2::after, #pic3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 100; /* Above the image */
+    left: 0;
+    top: 0;
+}
+
+#pic1:hover{
+    transform: rotate(25deg);
+}
+
+#pic2:hover, #pic3:hover{
+    transform: rotate(-30deg);
+}
+
+#pic1{
+    margin-left: 200px;
+    margin-top: 0px;
+    z-index:9;
+}
+
+#pic2{
+    margin-left: 50px;
+    margin-top: 90px;
+    z-index:9;
+}
+
+#pic3{
+    margin-left: -770px;
+    margin-top: 240px;
+    z-index:10;
+}
+
+.pin{
+    /* width:40px; */
+    position: absolute;
+    z-index: 11;
+}
+
+#pin1{
+    margin-top: -20px;
+    margin-left: 370px;
+}
+
+#pin2{
+    margin-top: 69px;
+    margin-left: 925px;
+}
+
+#pin3{
+    margin-top: 220px;
+    margin-left: 660px;
+}
+
+#cert{
+    width: auto;
+    height: 750px;
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 100px;
+    margin-right: auto;
+    align-items: center;
+    align-content: center;
+    rotate:-1deg;
+}
+
+.layer{
+    background-color: black;
+    opacity: 0.2; /* Default: dark when bulb is off */
+    width: 102%;
+    height: 290vh;
+    margin-left: -8px;
+    margin-top: -8px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind the wrapper */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
