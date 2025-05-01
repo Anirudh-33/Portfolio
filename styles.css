@@ -56,7 +56,7 @@ box-shadow: -2px 0 5px rgba(0,0,0,0.3);
 rotate:2deg;
 background-color: rgb(16, 16, 16);
 width:40%;
-height: 69px;
+height: 72px;
 padding-left: auto;
 padding-right: auto;
 margin-left: 750px;
@@ -68,13 +68,13 @@ opacity: 0;
 }
 
 h2{
-font-family: "Poppins", sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 font-size: 200%;
 z-index: 104;
 position: fixed;
 text-align:center;
 left:31px;
-top:-14%;
+top:-10%;
 width:auto;
 color: white;
 text-shadow: 0px 0px 10px magenta,
@@ -89,7 +89,7 @@ animation: blink2 6.5s linear infinite;
 content: "";
 background-color:none;
 border-style: solid;
-border-width: 3px;
+border-width: 4px;
 border-color: white;
 z-index: 106;
 position: fixed;
