@@ -3,6 +3,7 @@ let fixed_objects = document.getElementById('img-and-border');
 let moving_txt = document.getElementById('text-behind');
 let body = document.getElementById('body_');
 let abt = document.getElementById('head2');
+let neon = document.getElementById('neon-wrapper');
 let para = document.getElementById('text1');
 let btn1 = document.getElementById('btn1');
 let btn2 = document.getElementById('btn2');
@@ -79,8 +80,14 @@ function handleScroll() {
     linear-gradient(to bottom, rgb(${c}, ${c}, ${c}) 1px, transparent 1px)`;
   foreground.style.opacity = `${d}%`;
   moving_txt.style.opacity = `${f_}%`;
-  abt.style.marginTop = -20 + a * 5 + '%';
+  abt.style.marginTop = -25 + a * 5 + '%';
   abt.style.opacity = a * a * 2 - 1;
+  if(a>=0.999){
+    neon.style.opacity=1;
+  }
+  else{
+    neon.style.opacity=0;
+  }
 
   // Fade-in or instant disappearance for para
   if (a >= 0.999) {
@@ -155,7 +162,7 @@ function handleScroll() {
           }
         }
         scaleId2 = requestAnimationFrame(scaleIn2);
-      }, 300); // 0.3-second delay
+      }, 200); // 0.3-second delay
 
       // Third button (starts 0.3 seconds after btn2)
       timeout3 = setTimeout(() => {
@@ -173,8 +180,8 @@ function handleScroll() {
           }
         }
         scaleId3 = requestAnimationFrame(scaleIn3);
-      }, 600); // 0.3 seconds after btn2 (0.6 seconds total)
-    }, 1000); // 1-second delay
+      }, 400); // 0.3 seconds after btn2 (0.6 seconds total)
+    }, 500); // 1-second delay
   } else {
     // Reset all buttons to scale(0) and cancel animations
     if (scaleId1 !== null) cancelAnimationFrame(scaleId1);
