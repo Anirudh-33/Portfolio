@@ -1,346 +1,97 @@
-body{
-  display: flex;
-  overflow-x: hidden;
-  width: 100%;
-  left:-2px;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
-  background: rgb(214, 214, 214);
-  height: 120vh;
-  background-size: 12px 12px;
-  background-image: linear-gradient(to right, rgb(223, 223, 223) 1px, transparent 1px),
-  linear-gradient(to bottom, rgb(223, 223, 223) 1px, transparent 1px);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirudh Anand</title>
+    <link rel="stylesheet" href="styles - Copy.css">
+    <link rel="icon" type="image/x-icon" href="ME!.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poiret+One&family=Rampart+One&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="body_"></div>
+    <div class="so-media">
+        <a href="https://www.instagram.com/anirudh_.anand">
+            <img src="https://cdn-icons-png.freepik.com/256/1419/1419647.png?uid=R196922884&ga=GA1.1.772123818.1745132278&semt=sph" alt="Instagram" style="width: 30px; height: 30px;">
+        </a>
+        <a href="https://twitter.com/Anirudh__Anand" target="_blank">
+            <img src="https://cdn-icons-png.freepik.com/256/5968/5968830.png?uid=R196922884&ga=GA1.1.772123818.1745132278&semt=sph" alt="Twitter" style="width: 30px; height: 30px;">
+        </a>
+        <a href="https://www.linkedin.com/in/anirudh-anand-369-369-/" target="_blank">
+            <img src="https://cdn-icons-png.freepik.com/256/1384/1384046.png?uid=R196922884&ga=GA1.1.772123818.1745132278&semt=sph" alt="LinkedIn" style="width: 30px; height: 30px;">
+        </a>
+    </div>
+    <div class="logos">
+        <a href="https://html.spec.whatwg.org/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://www.javascript.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" style="width: 40px; height: 40px;">
+        </a>
+    </div>
+    
+    <div id="text-behind" >
+        <marquee scrollamount="30">
+            <h1>ANIRUDH ANAND</h1>
+        </marquee>
+    </div>
+    
+    <div id="img-and-border">
+        <img id="my-img" src="Me in phone.png">
+    </div>
+    
+    <div id="b1">
+    
+    </div> 
 
-.so-media{
-position: fixed; 
-top: 20px;
-right: 20px;
-display: flex;
-gap: 15px;
-z-index: 1000;
-}
+    <div class="page2-wrapper">
+        <div id="head2">About</div>
+        <div id="intro">
+            <p>
+                <b>Anirudh Anand</b> is a front-end developer and an inventive content writer. With the drive to create and impact thousands, he combines art and technology to create stunning outcomes.
+            </p>
+        </div>
+        <div id="neon-wrapper">
+            <div class="neon-text-wrapper">
+                <p class="neon-text" id="bl1">BLOGGER ·</p>
+                <p class="neon-text"id="bl2"> DEVELOPER · WRITER</p>
+            </div>
+        </div>
+    </div>
 
-.logos{
-position: fixed;
-top: 50%;
-right: 0; 
-transform: translateY(-50%); 
-background-color: black; 
-padding: 15px; 
-display: flex; 
-flex-direction: column; 
-gap: 20px; 
-border-radius: 5px 0 0 5px; 
-box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-}
+    <div id="btns">
+        <a class="hover-link" data-image="math alt.png"  href="Math blog.html">
+            <button class="btn" id="btn1">
+                <img src="Logo (Original).png">
+            </button>
+        </a>
+        <img id="hover-image" src="" alt="Hover Image" style="display: none;">
+        
+        <a class="hover-link" data-image="write alt.png" href="writer journey.html">
+            <button class="btn"  id="btn2"> 
+                <img src="ink pot.png">
+            </button>
+        </a>
+        <img id="hover-image" src="" alt="Hover Image" style="display: none;">
 
-#text-behind{
-  left:-2px;
-  position: fixed;
-  z-index: 100;
-  width: 104%;
-  display: block;
+        <a class="hover-link" data-image="code alt.png" href="Coder.html">
+            <button class="btn"  id="btn3">
+                <img src="code laptop.png">
+            </button>
+        </a>
+        <img id="hover-image" src="" alt="Hover Image" style="display: none;">
+    </div>
 
-}
-
-#text-behind h1{
-  font-family: "Rampart One", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 300px;
-}
-
-#neon-wrapper{
-rotate:2deg;
-background-color: rgb(16, 16, 16);
-width:47%;
-height: 78px;
-padding-left: auto;
-padding-right: auto;
-margin-left: 700px;
-margin-top: -35%;
-border-radius: 15px;
-z-index: 105;
-position: fixed;
-opacity: 0;
-}
-
-.neon1{
-font-family: "Poppins", sans-serif;
-font-size: 250%;
-z-index: 104;
-position: fixed;
-text-align:center;
-left:4%;
-top:-20%;
-width:auto;
-color: white;
-text-shadow: 0px 0px 10px magenta,
-            0px 0px 20px magenta,
-            0px 0px 40px magenta,
-            0px 0px 80px magenta;
--webkit-text-stroke: 0.1px magenta;
-animation: blink2 6.5s linear infinite;
-}
-
-#neon-wrapper::after{
-content: "";
-background-color:none;
-border-style: solid;
-border-width: 3.5px;
-border-color: white;
-z-index: 106;
-position: fixed;
-width: 97%;
-height: 76%;
-left: 1%;
-top:8%;
-padding: 1%;
-border-radius: 15px;
-box-shadow: 0px 0px 5px rgb(17, 0, 255),
-            0px 0px 11px rgb(17, 0, 255),
-            0px 0px 14px rgb(17, 0, 255),
-            inset 0px 0px 5px rgb(17, 0, 255), /*inset for glow inside the box */
-            inset 0px 0px 11px rgb(17, 0, 255),
-            inset 0px 0px 14px rgb(17, 0, 255);
-animation: blink3 6.5s linear infinite;           
-}
-
-
-#bl1{
-animation: blink1 6.5s linear infinite;
-}
-#bl2{
-margin-left: 235px;
-animation: blink2 6.5s linear infinite;
-}
-
-#img-and-border{
-  position: fixed;
-  display: inline-block;
-  width: 420px;
-  height: 790px;
-  z-index: 101;
-}
-
-#my-img{
-  position: absolute;
-  margin-top: 50px;
-  border: 30px solid transparent;
-  top: -20px;
-  left: -18px;
-  width: 100%;
-  height: 100%;
-}
-
-#b1{
-  position:fixed;
-  overflow: hidden; 
-  background: rgb(211, 211, 211,0);
-  width: 100%;
-  height: 120vh;
-  z-index:102;
-  left:0;
-  background: rgb(211, 211, 211);
-  background-size: 12px 12px;
-  background-image: linear-gradient(to right, rgb(223, 223, 223) 1px, transparent 1px),
-  linear-gradient(to bottom, rgb(223, 223, 223) 1px, transparent 1px);
-
-  opacity:0;
-}
-
-#head2{
-  position: absolute;
-  color:white;
-  z-index: 105;
-  margin-left: -70%;
-  font-family: "arial black", sans-serif;
-  font-size: 80px;
-  opacity: 0;
-}
-
-#text1{
-  width:41%;
-  position: absolute;
-  color:white;
-  z-index: 105;
-  margin-left: -50%;
-  /* padding-top: 30px; */
-  font-family:"Arial", sans-serif;
-  font-size: 30px;
-  text-align: justify;
-  opacity: 0;
-}
-
-/* button */
-
-
-.btn {
-margin: 100px;
-margin-top: 550px;
-border: none;
-outline: none;
-color: #FFF;
-cursor: pointer;
-position: relative;
-
-z-index: 106;
-border-radius: 50%;
-
-/*  */
-width: 218px; /* Fixed size for the button */
-height: 218px; 
-}
-
-/* glow */
-.btn::before {
-content: "";
-background: linear-gradient(
-  45deg,
-  #FF0000, #FF7300, #FFFB00, #48FF00,
-  #00FFD5, #002BFF, #FF00C8, #FF0000
-);
-position: absolute;
-top: -2px;
-left: -2px;
-background-size: 600%;  
-z-index: 105;
-width: calc(100% + 4px);
-height:  calc(100% + 4px);
-filter: blur(15px);
-animation: glowing 20s linear infinite;
-transition: opacity .3s ease-in-out;
-border-radius: 50%;
-opacity: 0;
-}
-
-@keyframes glowing {
-0% {background-position: 0 0;}
-50% {background-position: 400% 0;}
-100% {background-position: 0 0;}
-}
-
-/* hover */
-.btn:hover::before {
-opacity: 1;
-}
-
-.btn:active:after {
-background: transparent;
-}
-
-
-.btn img{
-z-index: 107;
-width: 222px;
-height: 222px;
-border-radius: 50%;
-position: relative;
-object-fit: cover;
-left:-9px;
-top: -3px;
-}
-
-#btn1:active{
-transform: scale(0.9);  
-}
-
-/* hover styles */
-
-
-#hover-image {
-position: fixed;
-pointer-events: none; /* Prevents the image from interfering with mouse events */
-max-width: 250px; /* Adjust size as needed */
-height: auto;
-z-index: 1000; /* Ensure it appears above other content */
-
-}
-
-/* text blink */
-
-@keyframes blink1{
-0%{
-  opacity: 1;
-}
-90%{
-  opacity: 1;
-}
-91%{
-  opacity: 0;
-}
-92%{
-  opacity: 1;
-}
-100%{
-  opacity: 1;
-}
-}
-
-@keyframes blink2 {
-0%{
-    opacity: 1;
-}
-9%{
-  opacity: 1;
-}
-10%{
-  opacity: 0;
-}
-11%{
-  opacity: 1;
-}
-13%{
-  opacity: 0;
-}
-14%{
-  opacity: 1;
-}
-70%{
-    opacity: 1;
-}
-71%{
-    opacity: 0;
-}
-72%{
-    opacity: 1;
-}
-78%{
-  opacity: 1;
-}
-79%{
-  opacity: 0;
-}
-80%{
-  opacity: 1;
-}
-81%{
-    opacity: 0;
-}
-86%{
-    opacity: 1;
-}
-100%{
-    opacity: 1;
-}
-}
-
-@keyframes blink3 {
-  0%{
-    opacity: 1;
-  }
-  9%{
-    opacity: 1;
-  }
-  10%{
-    opacity: 0;
-  }
-  11%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 1;
-  }
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script - Copy.js"></script>
+</body>
+</html>
