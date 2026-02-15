@@ -4,10 +4,12 @@ let moving_txt = document.getElementById('text-behind');
 let body = document.getElementById('body_');
 let abt = document.getElementById('head2');
 let neon = document.getElementById('neon-wrapper');
-let para = document.getElementById('text1');
+let para = document.getElementById('intro');
 let btn1 = document.getElementById('btn1');
 let btn2 = document.getElementById('btn2');
 let btn3 = document.getElementById('btn3');
+let hoverLinks = document.querySelectorAll('.hover-link');
+
 
 let fadeInId = null;
 let scaleId1 = null;
@@ -84,9 +86,17 @@ function handleScroll() {
   abt.style.opacity = a * a * 2 - 1;
   if(a>=0.999){
     neon.style.opacity=1;
+    hoverLinks.forEach(link => {
+      link.style.opacity = 1;
+      link.style.pointerEvents = "auto"
+    });
   }
   else{
     neon.style.opacity=0;
+    hoverLinks.forEach(link => {
+      link.style.opacity = 0;
+      link.style.pointerEvents = "none"
+    });
   }
 
   // Fade-in or instant disappearance for para
