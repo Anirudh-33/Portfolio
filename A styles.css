@@ -1,11 +1,14 @@
 body{
     background-image: url("https://images.unsplash.com/photo-1679431358007-b72d812fe68e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: 100%;
-    height:280vh;
+    /* height:280vh; */
     background-blend-mode:lighten;
     overflow-x: hidden;
-    background-position: 0% 0%;
-    background-repeat:2;
+    background-position: 0 0;
+    background-repeat:repeat;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -81,36 +84,38 @@ h1{
     text-align: center;
     font-size: 50px;
     color: white;
-    margin-top: 15px;
+    margin-top: 7vh;
     margin-bottom: 0px;
     text-shadow: 3px 3px 0px black;
     z-index: 10;
     position: relative;
 }
 
-.photos{
+.container{
     display: flex;
-    margin-top: 200px;
-    margin-left: 60px;
 }
 
+
 .board{
-    background-size: 100%;
-    width:970px;
-    height:1280px;
-    margin-top: -110px;
-    margin-left: 300px;
-    display:flex;
+    width:80vw;
+    height:auto;
+    margin: auto;
+    margin-top: 10vh;
+    left:10vw;
     position:absolute;
-    background-image: url("https://cdn.pixabay.com/photo/2014/11/06/21/08/bulletin-board-519960_1280.jpg");
-    rotate:90deg;
-    background-repeat: no-repeat;
+    /* padding: auto; */
+}
+
+.photos{
+    display: flex;
+    margin-top: calc(11vh + 9vw);
+    /* margin-left:-20vw; */
 }
 
 #pic1, #pic2, #pic3, .pic {
-    width: 500px;
-    height: 432.7px;
-    position: relative;
+    width: 30vw;
+    height: 25vw;
+    position: absolute;
     animation: rotate 2s infinite linear; /* Continuous rotation */
     transition: transform 0.6s ease;
     transform-origin: 50% 25px; /* Hinge at the middle top */
@@ -138,51 +143,50 @@ h1{
 }
 
 #pic1{
-    margin-left: 200px;
-    margin-top: 0px;
+    margin-left: calc(-1vh - 25vw);
+    margin-top: 0;
     z-index:9;
 }
 
 #pic2{
-    margin-left: 50px;
-    margin-top: 90px;
+    margin-left: calc(-1vh - 1vw);
+    margin-top: 5vw;
     z-index:9;
 }
 
 #pic3{
-    margin-left: -770px;
-    margin-top: 240px;
+    margin-left: calc(-5vh - 11vw);
+    margin-top: 18vw;
     z-index:10;
 }
 
 .pin{
-    /* width:40px; */
+    width:5vw;
     position: absolute;
     z-index: 11;
 }
 
 #pin1{
-    margin-top: -20px;
-    margin-left: 370px;
+    margin-left: calc(-0.8vh - 12.8vw);
+    margin-top: 0;
 }
 
 #pin2{
-    margin-top: 69px;
-    margin-left: 925px;
+    margin-left: calc(10vw);
+    margin-top: 5vw;
 }
 
 #pin3{
-    margin-top: 220px;
-    margin-left: 660px;
+    margin-left: calc(-3.9vh - 0.2vw);
+    margin-top: 18vw;
 }
 
 #cert{
-    width: auto;
-    height: 750px;
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 100px;
-    margin-right: auto;
+    width: 80vw;
+    height: auto;
+    position: relative;
+    margin-top: calc(2vh + 60vw);
+    left:5vw;
     align-items: center;
     align-content: center;
     rotate:-1deg;
@@ -190,23 +194,22 @@ h1{
 
 .layer{
     background-color: black;
-    opacity: 0.2; /* Default: dark when bulb is off */
+    opacity: 0.2; 
     width: 102%;
-    height: 290vh;
+    height: calc(40vh + 170vw);
     margin-left: -8px;
-    margin-top: -8px;
+    /* margin-top: -8px; */
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Behind the wrapper */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    z-index: 1;
 }
 
 .neon-wrapper{
   background-color: rgba(0, 0, 0, 0.259);
-  width:25%;
-  margin-left: 73%;
+  width: calc(9vh + 21vw);
+  margin-left: 60vw;
   border-radius: 20px;
   margin-top: 20%;
   z-index: 11;
@@ -224,7 +227,7 @@ h1{
   width:auto;
   top:15%;
   color: white;
-  font-size: 120px;
+  font-size: 8vw;
   text-shadow: 0px 0px 10px magenta,
               0px 0px 20px magenta,
               0px 0px 40px magenta,
@@ -237,11 +240,9 @@ h1{
   content: "";
   background-color:none;
   border-style: solid;
-  border-width: 6px;
+  border-width: calc(0.3vh + 0.2vw);
   border-color: white;
   z-index: 10;
-  /* margin-left: auto;
-  margin-right: auto; */
   position: absolute;
   width: 91.5%;
   height: 80%;
