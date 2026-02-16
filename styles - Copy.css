@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Archivo+Black&family=Codystar:wght@300;400&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Heebo:wght@100..900&family=Kanit&family=Licorice&family=Permanent+Marker&family=Playwrite+NZ+Basic:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap');
+
+body{
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  left:-2px;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  background: rgb(214, 214, 214);
+  height: 120vh;
+  background-size: 12px 12px;
+  background-image: linear-gradient(to right, rgb(223, 223, 223) 1px, transparent 1px),
+  linear-gradient(to bottom, rgb(223, 223, 223) 1px, transparent 1px);
+}
+
+.so-media{
+position: fixed; 
+top: 20px;
+right: 20px;
+display: flex;
+gap: 15px;
+z-index: 1000;
+}
+
+.logos{
+position: fixed;
+top: 50%;
+right: 0; 
+transform: translateY(-50%); 
+background-color: black; 
+padding: 15px; 
+display: flex; 
+flex-direction: column; 
+gap: 20px; 
+border-radius: 5px 0 0 5px; 
+box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+}
+
+#text-behind{
+  left:-2px;
+  position: fixed;
+  z-index: 100;
+  width: 104%;
+  display: block;
+
+}
+
+#text-behind h1{
+  font-family: "Rampart One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20vw;
+}
+
+#img-and-border{
+  position: fixed;
+  display: inline-block;
+  /* width: 420px;
+  height: 790px; */
+  z-index: 101;
+}
+
+#my-img{
+  /* position: absolute; */
+  margin-top: 50px;
+  border: 30px solid transparent;
+  top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30vw;
+  min-width: 250px;
+  /* height: 100%; */
+}
+
+#b1{
+  position:fixed;
+  overflow: hidden; 
+  width: 100%;
+  height: 120vh;
+  z-index:102;
+  left:0;
+  background: rgb(211, 211, 211);
+  background-size: 12px 12px;
+  background-image: linear-gradient(to right, rgb(223, 223, 223) 1px, transparent 1px),
+  linear-gradient(to bottom, rgb(223, 223, 223) 1px, transparent 1px);
+
+  opacity:0;
+}
+
+.page2-wrapper{
+  display: flex;
+}
+
+#head2{
+  position: fixed;
+  color:white;
+  z-index: 105;
+  top: calc(10vh + 20vw);
+  left:10vw;
+  
+  /* font */
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  font-weight: 300;
+  font-style: normal;
+  /* --- */
+  font-size: calc(3vw + 3.5vh);
+  opacity: 0;
+}
+
+#intro{
+  width: calc(40vh + 20vw);
+  position: absolute;
+  color: white;
+  z-index: 105;
+  margin: 0 3vh 0 3vh;
+  
+  /* font */
+  font-family: "Shadows Into Light", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* --- */
+  line-height: 1.3;
+  font-size: calc(20px + 0.5vw);
+  text-align: justify;
+  opacity: 0;
+  left: 10vw;
+  /* top: calc(40vh + 2vw); */
+  top: calc(35vh + 5vw);
+}
+
+
+/* Neon Board */
+
+#neon-wrapper{
+  position: fixed;
+  rotate:2deg;
+  background-color: rgb(16, 16, 16);
+  width: calc(24.2vw + 43vh);
+  height: calc(2.4vw + 7vh);
+  padding-left: 0 0.5% 0 0.5%;
+  top: calc(68vh - 25vw);
+  right:5%;
+  border-radius: 15px;
+  z-index: 105;
+  opacity: 0;
+}
+  
+.neon-text-wrapper{
+  display:flex;
+}
+
+  .neon-text{
+  font-family: "Poppins", sans-serif;
+  font-size: calc(1.5vw + 2.6vh);
+  z-index: 104;
+  position: relative;
+  text-align: center;
+  left: calc(2vh + 1vw);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  color: white;
+  text-shadow: 0px 0px 10px magenta,
+              0px 0px 20px magenta,
+              0px 0px 40px magenta,
+              0px 0px 80px magenta;
+  -webkit-text-stroke: 0.1px magenta;
+  animation: blink2 6.5s linear infinite;
+  }
+  
+  #neon-wrapper::after{
+  content: "";
+  background-color:none;
+  border-style: solid;
+  border-width: 3.5px;
+  border-color: white;
+  z-index: 106;
+  position: fixed;
+  width: 94.2%;
+  height: 60%;
+  left: 1.4%;
+  top:8%;
+  padding: 1%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgb(17, 0, 255),
+              0px 0px 11px rgb(17, 0, 255),
+              0px 0px 14px rgb(17, 0, 255),
+              inset 0px 0px 5px rgb(17, 0, 255), /*inset for glow inside the box */
+              inset 0px 0px 11px rgb(17, 0, 255),
+              inset 0px 0px 14px rgb(17, 0, 255);
+  animation: blink3 6.5s linear infinite;           
+  }
+  
+  #bl1{
+  position: relative;
+  animation: blink1 6.5s linear infinite;
+  }
+  #bl2{
+  position: relative;
+  left: calc(3.2vh + 1.4vw);
+  /* margin-left: 235px; */
+  animation: blink2 6.5s linear infinite;
+  }
+
+/* button */
+
+#btns{
+  position: fixed;
+  display: inline;
+  height: 15vw;
+  z-index:400;
+  margin-top: 36vh;
+  align-content: center;
+}
+
+.btn {
+margin: 0 5vw 0 5vw;
+color: #FFF;
+cursor: pointer;
+position: relative;
+z-index: 106;
+border-radius: 50%;
+width: calc(8vw + 7vh);
+height: calc(8vw + 7vh); 
+padding: 0;
+}
+
+/* glow */
+
+.btn::before {
+content: "";
+background: linear-gradient(
+  45deg,
+  #FF0000, #FF7300, #FFFB00, #48FF00,
+  #00FFD5, #002BFF, #FF00C8, #FF0000
+);
+position: absolute;
+padding: 0;
+background-size: 600%;  
+z-index: 105;
+width: calc(10vw + 8vh + 4px);
+height:  calc(10vw + 8vh + 4px);
+top: calc(-1vw - 1vh);
+left: calc(-1vw - 1vh);
+filter: blur(15px);
+animation: glowing 20s linear infinite;
+transition: opacity .3s ease-in-out;
+border-radius: 50%;
+opacity: 0;
+}
+
+@keyframes glowing {
+0% {background-position: 0 0;}
+50% {background-position: 400% 0;}
+100% {background-position: 0 0;}
+}
+
+/* hover */
+.btn:hover::before {
+opacity: 1;
+}
+
+.btn:active:after {
+background: transparent;
+}
+
+.btn img{
+z-index: 107;
+width: 114%;
+height: 114%;
+margin: 0;
+border-radius: 50%;
+position: relative;
+top:-7%;
+left: -7%;
+}
+
+#btn1:active{
+transform: scale(0.9);  
+}
+
+/* hover styles */
+
+#hover-image {
+position: fixed;
+pointer-events: none; /* Prevents the image from interfering with mouse events */
+max-width: 200px; /* Adjust size as needed */
+height: auto;
+z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+
+/* This removes the underline from the spaces between your buttons */
+.hover-link {
+  text-decoration: none;
+  display: inline-block; /* Keeps them side-by-side but behaving like blocks */
+  vertical-align: middle;
+  opacity: 0;
+}
+
+/* Optional: To be extra safe, ensure no text-level gaps exist */
+#btns {
+  line-height: 0;
+  font-size: 0;
+}
+
+/* text blink */
+
+@keyframes blink1{
+0%{
+  opacity: 1;
+}
+90%{
+  opacity: 1;
+}
+91%{
+  opacity: 0;
+}
+92%{
+  opacity: 1;
+}
+100%{
+  opacity: 1;
+}
+}
+
+@keyframes blink2 {
+0%{
+    opacity: 1;
+}
+9%{
+  opacity: 1;
+}
+10%{
+  opacity: 0;
+}
+11%{
+  opacity: 1;
+}
+13%{
+  opacity: 0;
+}
+14%{
+  opacity: 1;
+}
+70%{
+    opacity: 1;
+}
+71%{
+    opacity: 0;
+}
+72%{
+    opacity: 1;
+}
+78%{
+  opacity: 1;
+}
+79%{
+  opacity: 0;
+}
+80%{
+  opacity: 1;
+}
+81%{
+    opacity: 0;
+}
+86%{
+    opacity: 1;
+}
+100%{
+    opacity: 1;
+}
+}
+
+@keyframes blink3 {
+  0%{
+    opacity: 1;
+  }
+  9%{
+    opacity: 1;
+  }
+  10%{
+    opacity: 0;
+  }
+  11%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
