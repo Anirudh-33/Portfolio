@@ -7,12 +7,17 @@
     <title>Journey as a writer</title>
     <link rel="stylesheet" href="WJ styles.css">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/16861/16861844.png?ga=GA1.1.772123818.1745132278&semt=ais_hybrid"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Archivo+Black&family=Chelsea+Market&family=Codystar:wght@300;400&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Heebo:wght@100..900&family=Kanit&family=Licorice&family=Permanent+Marker&family=Playwrite+DK+Uloopet+Guides&family=Playwrite+NZ+Basic:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch&family=Rubik+Vinyl&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>
     <a href="Achievement.html" class="ach-button">Achievement</a>
     <h1>JOURNEY AS A WRITER</h1>
     <div class="p_l">
+        <div class="glow-ball" id="hover-image"></div>
         <div class="para">
             <p> 
                 Anirudh set foot in the art of writing at the age of fifteen. Having literature as a weak spot with average scores, yet determined enough he kept fine-tuning his writing style, gradually developing a unique way to express — through instances and references. Eventually discovering that writing was meant to be the part of his life journey, he adopted the art like a transfusion. Inspired by many, honoured Alan Wilson Watts, JK Rowling and George RR Martin remain the biggest influences on him. With the feeling instilled to impact others, he embarked on the journey to convey the peculiarity of art and significance of simplicity in life.
@@ -27,22 +32,56 @@
             </p>
         </div>
 
+        <h4>Blogs</h4>
+
         <div class="btn-wrapper">
-            <a href ="https://inkandrozes.wordpress.com/" class="hover-link" data-image="math alt.png">
+            <a href ="https://inkandrozes.wordpress.com/" class="hover-link">
                 <button class="btn" id="btn1">
-                    <img src="Rose2.png">
+                    <img src="Ink&Roses.png">
                     <div class="details">Ink&Roses</div>
                 </button>
             </a>
 
-            <a href="https://hotchocolate.water.blog/" class="hover-link" data-image="math alt.png">
+            <a href="https://hotchocolate.water.blog/" class="hover-link">
                 <button class="btn" id="btn2">
-                    <img src="Coffee.png">
+                    <img src="HotChocolate.png">
                     <div class="details">Hot Chocolate</div>
                 </button>
             </a>
             <img id="hover-image" src="" alt="Hover Image" style="display: none;">
         </div>
+        <br>
+        <h4>Stories</h4>
+        <div class="btn-wrapper">
+            <a href ="https://www.wattpad.com/user/Anirudh_Anand" class="hover-link">
+                <button class="btn" id="btn3">
+                    <img src="Wattpad.png">
+                    <div class="details">Wattpad</div>
+                </button>
+            </a>
+        </div>
     </div>
+
+    <script>
+        // Mouse along
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.p_l');
+
+            cards.forEach(card => {
+                const ball = card.querySelector('.glow-ball');
+                if (!ball) return;
+
+                // getBoundingClientRect is scroll-aware
+                const rect = card.getBoundingClientRect();
+
+                // Calculate local mouse position within the card
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                ball.style.left = `${x}px`;
+                ball.style.top = `${y}px`;
+            });
+        });
+    </script>
 </body>
 </html>
