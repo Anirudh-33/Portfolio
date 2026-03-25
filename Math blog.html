@@ -12,6 +12,7 @@
     <a href="index.html" class="home-button">Home</a>
     <h1>MATHMATRIX</h1>
     <div class="p_l">
+        <div class="glow-ball" id="hover-image"></div>
         <div class="para">
             <p> 
                 Always being extraordinarily intelligent in Euclidean Geometry, Anirudh always had that urge to teach pupil in a way that made them visualize the process easily. and the most effective way to do so is teaching concepts using animation. Anirudh aims to make learning addictive by avoiding the mundane explanation and sticking to utilising simple visual effects which makes the lessons saved in learner's long term memory.
@@ -37,5 +38,26 @@
 
         </div>
     </div>
+    <script>
+        // Mouse along
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.p_l');
+
+            cards.forEach(card => {
+                const ball = card.querySelector('.glow-ball');
+                if (!ball) return;
+
+                // getBoundingClientRect is scroll-aware
+                const rect = card.getBoundingClientRect();
+
+                // Calculate local mouse position within the card
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                ball.style.left = `${x}px`;
+                ball.style.top = `${y}px`;
+            });
+        });
+    </script>
 </body>
 </html>
