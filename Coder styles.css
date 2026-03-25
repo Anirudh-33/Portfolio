@@ -1,6 +1,6 @@
 body{
     background-image: url("https://images.pexels.com/photos/29624348/pexels-photo-29624348/free-photo-of-modern-home-office-desk-with-tech-gadgets.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-size: 100%;
+    background-size: cover;
     background-blend-mode:lighten;
     /* align-items: center; */
     overflow-x: hidden;
@@ -36,25 +36,55 @@ h1{
 
 .p_l{
   width:66%;
-  height: 62vh;
+  min-height: 62vh;
   background-color: rgba(255, 255, 255, 0.75);
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 0%;
-
+  color:white;
+  /* Glass morph */
+  background: rgba(0, 0, 0, 0.05); /* Transparent background */
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px); /* Safari fix */
+            box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+            border-radius: 10px; margin-bottom: 30px; 
+            overflow: hidden;
+  z-index: 1;
+  padding: 4vh;
 }
 
+.glow-ball {
+  z-index: 0;
+  position: absolute;
+  left:-20%;
+  height: 20vw;
+  width: 20vw;
+  pointer-events: none;
+  /* Clean up the transform - only use 50% to center it */
+  transform: translate(-50%, -50%); 
+  background-image: radial-gradient(rgba(0, 255, 255, 0.4), transparent 70%);
+  transition: opacity 0.3s ease;
+  /* Remove 'top: 20vh' as JS will handle positioning */
+}
+
+#hover-image{
+  background-image: radial-gradient(rgba(0, 255, 255, 0.4), transparent 70%);
+  z-index: 0;
+}
+
+
 .para{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: justify;
-    font-size: 20px;
-    padding: 8px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align-last: center;
-    margin-left: auto;
-    margin-right: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: justify;
+  font-size: 20px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align-last: center;
+  margin-left: auto;
+  margin-right: auto;
+  mix-blend-mode: difference;
 }
 
 /*//////*/
@@ -64,7 +94,7 @@ h1{
   margin-right: auto;
   margin-bottom: 0%;
   justify-content: center;
-  Width:500px;
+  Width:100%;
   display: flex;
   /* background-color: blueviolet; */
 }
@@ -74,13 +104,13 @@ h1{
   outline: none;
   color: #FFF;
   cursor: pointer;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
   z-index: 106;
   border-radius: 50%;
-  width: 180px;
-  height: 180px; 
-  
+  width: calc(6.1vw + 11.1vh);
+  height: calc(6.1vw + 11.1vh); 
+  background-color: transparent;
 }
 
 .btn img{
@@ -134,8 +164,8 @@ h1{
 
 .btn img{
   z-index: 107;
-  width: 182px;
-  height: 182px;
+  width: calc(6.1vw + 11.1vh);
+  height: calc(6.1vw + 11.1vh);
   border-radius: 50%;
   position: relative;
   object-fit: cover;
