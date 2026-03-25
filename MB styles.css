@@ -1,10 +1,11 @@
 body{
     background-image: url("https://images.pexels.com/photos/15919233/pexels-photo-15919233/free-photo-of-modern-technology-home-office.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-size: 100%;
+    background-size: cover;
     background-blend-mode:lighten;
     overflow-x: hidden;
     background-position: center 35%;
     margin-top: 3%;
+
 }
 
 .home-button {
@@ -36,13 +37,39 @@ h1{
 
 .p_l{
   width:66%;
-  height: 78vh;
+  min-height: 78vh;
   background-color: rgba(0, 0, 0, 0.85);
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
   margin-bottom: 0%;
+/* Glass morph */
+background: rgba(255, 255, 255, 0.05); /* Transparent background */
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(30px); /* Safari fix */
+box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+border-radius: 10px; margin-bottom: 30px; 
+overflow: hidden;
+z-index: 1;
+}
 
+.glow-ball {
+  z-index: 0;
+  position: absolute;
+  left:-20%;
+  height: 20vw;
+  width: 20vw;
+  pointer-events: none;
+  /* Clean up the transform - only use 50% to center it */
+  transform: translate(-50%, -50%); 
+  /* background-image: radial-gradient(rgba(0, 255, 255, 0.4), transparent 70%); */
+  transition: opacity 0.3s ease;
+  /* Remove 'top: 20vh' as JS will handle positioning */
+}
+
+#hover-image{
+  background-image: radial-gradient(bisque, transparent 70%);
+  z-index: 0;
 }
 
 .para{
@@ -56,6 +83,7 @@ h1{
     text-align-last: center;
     margin-left: auto;
     margin-right: auto;
+    mix-blend-mode: difference;
 }
 
 /*//////*/
@@ -65,7 +93,7 @@ h1{
   margin-right: auto;
   margin-bottom: 0%;
   justify-content: center;
-  Width:500px;
+  Width:100%;
   display: flex;
   /* background-color: blueviolet; */
 }
@@ -75,13 +103,11 @@ h1{
   outline: none;
   color: #FFF;
   cursor: pointer;
-  margin-left: 40px;
-  margin-right: 40px;
   z-index: 106;
   border-radius: 50%;
-  width: 180px;
-  height: 180px; 
-  
+  width: calc(10vh + 7vw);
+  height: calc(10vh + 7vw); 
+  background-color: transparent;
 }
 
 .btn img{
@@ -131,8 +157,8 @@ h1{
 
 .btn img{
   z-index: 107;
-  width: 182px;
-  height: 182px;
+  width: calc(10.1vh + 7.1vw);
+  height: calc(10.1vh + 7.1vw);
   border-radius: 50%;
   position: relative;
   object-fit: cover;
@@ -141,8 +167,3 @@ h1{
   border-color: black;
   border-width:thick;
 }
-
-
-
-
-
