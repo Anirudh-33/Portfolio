@@ -12,6 +12,7 @@
     <a href="index.html" class="home-button">Home</a>
     <h1>JOURNEY AS A CODER</h1>
     <div class="p_l">
+        <div class="glow-ball"></div>
         <div class="para">
             <p> 
                 Decided to become a computer engineer as soon as got aware of this very term, Anirudh Anand was eager to know about computer ever since his childhood. His good command on mathematics is what helped him excel in logic building. And being creative, he figured out that the field of Front-End Development will be his lasting companion.
@@ -39,5 +40,26 @@
             </a>
         </div>
     </div>
+    <script>
+        // Mouse along
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.p_l');
+
+            cards.forEach(card => {
+                const ball = card.querySelector('.glow-ball');
+                if (!ball) return;
+
+                // getBoundingClientRect is scroll-aware
+                const rect = card.getBoundingClientRect();
+
+                // Calculate local mouse position within the card
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                ball.style.left = `${x}px`;
+                ball.style.top = `${y}px`;
+            });
+        });
+    </script>
 </body>
 </html>
