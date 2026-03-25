@@ -147,7 +147,7 @@ gsap.fromTo(".btn",
       trigger: "#btns",
       start: "top 80%",     // triggers when buttons enter viewport
       toggleActions: "play none none reverse",
-      markers: true
+      markers: false
     },
     scale: 1,
     opacity: 1,
